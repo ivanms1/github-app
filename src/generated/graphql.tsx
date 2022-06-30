@@ -26307,6 +26307,7 @@ export type WorkflowRunPendingDeploymentRequestsArgs = {
 
 export type SearchRepositoriesQueryVariables = Exact<{
   query: Scalars["String"];
+  after?: InputMaybe<Scalars["String"]>;
 }>;
 
 export type SearchRepositoriesQuery = {
@@ -26329,6 +26330,7 @@ export type SearchRepositoriesQuery = {
       | { __typename?: "PullRequest" }
       | {
           __typename?: "Repository";
+          id: string;
           name: string;
           nameWithOwner: string;
           description?: string | null;
@@ -26355,8 +26357,8 @@ export type SearchRepositoriesQuery = {
 };
 
 export const SearchRepositoriesDocument = gql`
-  query SearchRepositories($query: String!) {
-    search(query: $query, type: REPOSITORY, first: 10) {
+  query SearchRepositories($query: String!, $after: String) {
+    search(query: $query, type: REPOSITORY, after: $after, first: 10) {
       repositoryCount
       pageInfo {
         startCursor
@@ -26365,6 +26367,7 @@ export const SearchRepositoriesDocument = gql`
       }
       repositories: nodes {
         ... on Repository {
+          id
           name
           nameWithOwner
           description
@@ -26399,6 +26402,7 @@ export const SearchRepositoriesDocument = gql`
  * const { data, loading, error } = useSearchRepositoriesQuery({
  *   variables: {
  *      query: // value for 'query'
+ *      after: // value for 'after'
  *   },
  * });
  */

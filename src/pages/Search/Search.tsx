@@ -1,5 +1,6 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { Waypoint } from "react-waypoint";
 
 import RepositoryCard from "@/components/RepositoryCard";
 
@@ -31,10 +32,30 @@ type Inputs = {
 };
 
 function Search() {
-  const [search, { data }] = useSearchRepositoriesLazyQuery();
-  const { register, handleSubmit } = useForm<Inputs>();
+  const [search, { data, fetchMore, loading, client }] =
+    useSearchRepositoriesLazyQuery();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const { register, handleSubmit, getValues } = useForm<Inputs>();
+
+  const onRefetch = () => {
+    if (!data?.search?.pageInfo?.hasNextPage) {
+      return;
+    }
+
+    const values = getValues();
+
+    fetchMore({
+      variables: {
+        after: data?.search?.pageInfo?.endCursor,
+        query: `${values?.query} ${values?.sortBy ?? ""} ${
+          values?.language ?? ""
+        }`.trim(),
+      },
+    });
+  };
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    await client.cache.reset();
     search({
       variables: {
         query: `${data?.query} ${data?.sortBy ?? ""} ${
@@ -67,12 +88,17 @@ function Search() {
         {!!data?.search?.repositoryCount && (
           <p>{data?.search?.repositoryCount} results</p>
         )}
-        {data?.search?.repositories?.map(
-          (repo) =>
-            repo?.__typename === "Repository" && (
-              <RepositoryCard key={repo.nameWithOwner} repo={repo} />
-            )
-        )}
+        <div>
+          {data?.search?.repositories?.map(
+            (repo) =>
+              repo?.__typename === "Repository" && (
+                <RepositoryCard key={repo.nameWithOwner} repo={repo} />
+              )
+          )}
+          {!loading && data?.search?.pageInfo?.endCursor && (
+            <Waypoint onEnter={onRefetch} bottomOffset="-20%" />
+          )}
+        </div>
       </form>
     </div>
   );

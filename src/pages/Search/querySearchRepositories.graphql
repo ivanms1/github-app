@@ -1,5 +1,5 @@
-query SearchRepositories($query: String!) {
-  search(query: $query, type: REPOSITORY, first: 10) {
+query SearchRepositories($query: String!, $after: String) {
+  search(query: $query, type: REPOSITORY, after: $after, first: 10) {
     repositoryCount
     pageInfo {
       startCursor
@@ -8,6 +8,7 @@ query SearchRepositories($query: String!) {
     }
     repositories: nodes {
       ... on Repository {
+        id
         name
         nameWithOwner
         description

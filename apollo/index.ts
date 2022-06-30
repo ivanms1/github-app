@@ -1,5 +1,6 @@
 import merge from "deepmerge";
 import isEqual from "lodash/isEqual";
+import uniqBy from "lodash/uniqBy";
 import {
   ApolloClient,
   createHttpLink,
@@ -38,7 +39,28 @@ function createApolloClient() {
     cache: new InMemoryCache({
       typePolicies: {
         Query: {
-          fields: {},
+          fields: {
+            search: {
+              keyArgs: false,
+              merge(existing = null, incoming) {
+                if (!existing || !existing?.nodes?.length) {
+                  return incoming;
+                }
+
+                const existingResults = existing?.nodes ?? [];
+
+                const uniqRepos = uniqBy(
+                  [...existingResults, ...incoming.nodes],
+                  "__ref"
+                );
+
+                return {
+                  ...incoming,
+                  nodes: [...uniqRepos],
+                };
+              },
+            },
+          },
         },
       },
     }),
