@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
-import QUERY_VIEWER from "./QueryViewer.graphql";
-import { useQuery } from "@apollo/client";
+import RepositoryCard from "@/components/RepositoryCard";
+
+import { useSearchRepositoriesLazyQuery } from "src/generated/graphql";
 
 function Search() {
-  const { data } = useQuery(QUERY_VIEWER);
+  const [search, { data }] = useSearchRepositoriesLazyQuery();
+  const [query, setQuery] = useState("");
 
-  return <div>{data?.viewer?.login}</div>;
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    search({
+      variables: {
+        query,
+      },
+    });
+  };
+
+  return (
+    <div>
+      <h1>Search your favorite repos</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          type="text"
+        />
+        <button type="submit">Search</button>
+        {data?.search?.repositories?.map(
+          (repo) =>
+            repo?.__typename === "Repository" && (
+              <RepositoryCard key={repo.nameWithOwner} repo={repo} />
+            )
+        )}
+      </form>
+    </div>
+  );
 }
 
 export default Search;
