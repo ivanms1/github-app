@@ -21,7 +21,14 @@ export interface RepositoryCardProps {
 }
 
 function RepositoryCard({ repo }: RepositoryCardProps) {
-  return <div>{repo.nameWithOwner}</div>;
+  return (
+    <div>
+      <h3>{repo.nameWithOwner}</h3>
+      {repo.languages?.edges?.map((lang) => (
+        <p key={lang?.language.id}>{lang?.language.name}</p>
+      ))}
+    </div>
+  );
 }
 
 export default RepositoryCard;
