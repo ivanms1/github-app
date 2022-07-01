@@ -39,12 +39,30 @@ function RepositoryCard({ repo }: RepositoryCardProps) {
             starrableId: repo.id,
           },
         },
+        optimisticResponse: {
+          removeStar: {
+            starrable: {
+              ...repo,
+              viewerHasStarred: false,
+              stargazerCount: repo.stargazerCount - 1,
+            },
+          },
+        },
       });
     } else {
       star({
         variables: {
           input: {
             starrableId: repo.id,
+          },
+        },
+        optimisticResponse: {
+          addStar: {
+            starrable: {
+              ...repo,
+              viewerHasStarred: true,
+              stargazerCount: repo.stargazerCount + 1,
+            },
           },
         },
       });
