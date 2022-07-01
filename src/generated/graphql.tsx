@@ -26305,6 +26305,48 @@ export type WorkflowRunPendingDeploymentRequestsArgs = {
   last?: InputMaybe<Scalars["Int"]>;
 };
 
+export type AddStarMutationVariables = Exact<{
+  input: AddStarInput;
+}>;
+
+export type AddStarMutation = {
+  __typename?: "Mutation";
+  addStar?: {
+    __typename?: "AddStarPayload";
+    starrable?:
+      | { __typename?: "Gist" }
+      | {
+          __typename?: "Repository";
+          id: string;
+          stargazerCount: number;
+          viewerHasStarred: boolean;
+        }
+      | { __typename?: "Topic" }
+      | null;
+  } | null;
+};
+
+export type RemoveStarMutationVariables = Exact<{
+  input: RemoveStarInput;
+}>;
+
+export type RemoveStarMutation = {
+  __typename?: "Mutation";
+  removeStar?: {
+    __typename?: "RemoveStarPayload";
+    starrable?:
+      | { __typename?: "Gist" }
+      | {
+          __typename?: "Repository";
+          id: string;
+          stargazerCount: number;
+          viewerHasStarred: boolean;
+        }
+      | { __typename?: "Topic" }
+      | null;
+  } | null;
+};
+
 export type SearchRepositoriesQueryVariables = Exact<{
   query: Scalars["String"];
   after?: InputMaybe<Scalars["String"]>;
@@ -26336,18 +26378,14 @@ export type SearchRepositoriesQuery = {
           description?: string | null;
           updatedAt: any;
           createdAt: any;
+          pushedAt?: any | null;
           stargazerCount: number;
-          languages?: {
-            __typename?: "LanguageConnection";
-            edges?: Array<{
-              __typename?: "LanguageEdge";
-              language: {
-                __typename?: "Language";
-                color?: string | null;
-                name: string;
-                id: string;
-              };
-            } | null> | null;
+          viewerHasStarred: boolean;
+          primaryLanguage?: {
+            __typename?: "Language";
+            color?: string | null;
+            name: string;
+            id: string;
           } | null;
         }
       | { __typename?: "User" }
@@ -26356,6 +26394,115 @@ export type SearchRepositoriesQuery = {
   };
 };
 
+export const AddStarDocument = gql`
+  mutation AddStar($input: AddStarInput!) {
+    addStar(input: $input) {
+      starrable {
+        ... on Repository {
+          id
+          stargazerCount
+          viewerHasStarred
+        }
+      }
+    }
+  }
+`;
+export type AddStarMutationFn = Apollo.MutationFunction<
+  AddStarMutation,
+  AddStarMutationVariables
+>;
+
+/**
+ * __useAddStarMutation__
+ *
+ * To run a mutation, you first call `useAddStarMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddStarMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addStarMutation, { data, loading, error }] = useAddStarMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useAddStarMutation(
+  baseOptions?: Apollo.MutationHookOptions<
+    AddStarMutation,
+    AddStarMutationVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useMutation<AddStarMutation, AddStarMutationVariables>(
+    AddStarDocument,
+    options
+  );
+}
+export type AddStarMutationHookResult = ReturnType<typeof useAddStarMutation>;
+export type AddStarMutationResult = Apollo.MutationResult<AddStarMutation>;
+export type AddStarMutationOptions = Apollo.BaseMutationOptions<
+  AddStarMutation,
+  AddStarMutationVariables
+>;
+export const RemoveStarDocument = gql`
+  mutation RemoveStar($input: RemoveStarInput!) {
+    removeStar(input: $input) {
+      starrable {
+        ... on Repository {
+          id
+          stargazerCount
+          viewerHasStarred
+        }
+      }
+    }
+  }
+`;
+export type RemoveStarMutationFn = Apollo.MutationFunction<
+  RemoveStarMutation,
+  RemoveStarMutationVariables
+>;
+
+/**
+ * __useRemoveStarMutation__
+ *
+ * To run a mutation, you first call `useRemoveStarMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRemoveStarMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [removeStarMutation, { data, loading, error }] = useRemoveStarMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useRemoveStarMutation(
+  baseOptions?: Apollo.MutationHookOptions<
+    RemoveStarMutation,
+    RemoveStarMutationVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useMutation<RemoveStarMutation, RemoveStarMutationVariables>(
+    RemoveStarDocument,
+    options
+  );
+}
+export type RemoveStarMutationHookResult = ReturnType<
+  typeof useRemoveStarMutation
+>;
+export type RemoveStarMutationResult =
+  Apollo.MutationResult<RemoveStarMutation>;
+export type RemoveStarMutationOptions = Apollo.BaseMutationOptions<
+  RemoveStarMutation,
+  RemoveStarMutationVariables
+>;
 export const SearchRepositoriesDocument = gql`
   query SearchRepositories($query: String!, $after: String) {
     search(query: $query, type: REPOSITORY, after: $after, first: 10) {
@@ -26373,15 +26520,13 @@ export const SearchRepositoriesDocument = gql`
           description
           updatedAt
           createdAt
+          pushedAt
           stargazerCount
-          languages(first: 5, orderBy: { field: SIZE, direction: DESC }) {
-            edges {
-              language: node {
-                color
-                name
-                id
-              }
-            }
+          viewerHasStarred
+          primaryLanguage {
+            color
+            name
+            id
           }
         }
       }

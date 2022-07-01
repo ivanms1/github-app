@@ -14,15 +14,13 @@ query SearchRepositories($query: String!, $after: String) {
         description
         updatedAt
         createdAt
+        pushedAt
         stargazerCount
-        languages(first: 5, orderBy: { field: SIZE, direction: DESC }) {
-          edges {
-            language: node {
-              color
-              name
-              id
-            }
-          }
+        viewerHasStarred
+        primaryLanguage {
+          color
+          name
+          id
         }
       }
     }

@@ -86,7 +86,7 @@ function Search() {
         </select>
         <button type="submit">Search</button>
         {!!data?.search?.repositoryCount && (
-          <p>{data?.search?.repositoryCount} results</p>
+          <p>{data?.search?.repositoryCount.toLocaleString()} results</p>
         )}
         <div>
           {data?.search?.repositories?.map(
