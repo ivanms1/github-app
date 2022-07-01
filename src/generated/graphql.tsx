@@ -26394,6 +26394,49 @@ export type SearchRepositoriesQuery = {
   };
 };
 
+export type UserStarredRepositoriesQueryVariables = Exact<{
+  after?: InputMaybe<Scalars["String"]>;
+}>;
+
+export type UserStarredRepositoriesQuery = {
+  __typename?: "Query";
+  viewer: {
+    __typename?: "User";
+    login: string;
+    name?: string | null;
+    starredRepositories: {
+      __typename?: "StarredRepositoryConnection";
+      pageInfo: {
+        __typename?: "PageInfo";
+        startCursor?: string | null;
+        hasNextPage: boolean;
+        endCursor?: string | null;
+      };
+      repositories?: Array<{
+        __typename?: "StarredRepositoryEdge";
+        node: {
+          __typename?: "Repository";
+          id: string;
+          name: string;
+          nameWithOwner: string;
+          description?: string | null;
+          updatedAt: any;
+          createdAt: any;
+          pushedAt?: any | null;
+          stargazerCount: number;
+          viewerHasStarred: boolean;
+          primaryLanguage?: {
+            __typename?: "Language";
+            color?: string | null;
+            name: string;
+            id: string;
+          } | null;
+        };
+      } | null> | null;
+    };
+  };
+};
+
 export const AddStarDocument = gql`
   mutation AddStar($input: AddStarInput!) {
     addStar(input: $input) {
@@ -26584,6 +26627,90 @@ export type SearchRepositoriesLazyQueryHookResult = ReturnType<
 export type SearchRepositoriesQueryResult = Apollo.QueryResult<
   SearchRepositoriesQuery,
   SearchRepositoriesQueryVariables
+>;
+export const UserStarredRepositoriesDocument = gql`
+  query UserStarredRepositories($after: String) {
+    viewer {
+      login
+      name
+      starredRepositories(first: 10, after: $after) {
+        pageInfo {
+          startCursor
+          hasNextPage
+          endCursor
+        }
+        repositories: edges {
+          node {
+            id
+            name
+            nameWithOwner
+            description
+            updatedAt
+            createdAt
+            pushedAt
+            stargazerCount
+            viewerHasStarred
+            primaryLanguage {
+              color
+              name
+              id
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+/**
+ * __useUserStarredRepositoriesQuery__
+ *
+ * To run a query within a React component, call `useUserStarredRepositoriesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useUserStarredRepositoriesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useUserStarredRepositoriesQuery({
+ *   variables: {
+ *      after: // value for 'after'
+ *   },
+ * });
+ */
+export function useUserStarredRepositoriesQuery(
+  baseOptions?: Apollo.QueryHookOptions<
+    UserStarredRepositoriesQuery,
+    UserStarredRepositoriesQueryVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<
+    UserStarredRepositoriesQuery,
+    UserStarredRepositoriesQueryVariables
+  >(UserStarredRepositoriesDocument, options);
+}
+export function useUserStarredRepositoriesLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<
+    UserStarredRepositoriesQuery,
+    UserStarredRepositoriesQueryVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<
+    UserStarredRepositoriesQuery,
+    UserStarredRepositoriesQueryVariables
+  >(UserStarredRepositoriesDocument, options);
+}
+export type UserStarredRepositoriesQueryHookResult = ReturnType<
+  typeof useUserStarredRepositoriesQuery
+>;
+export type UserStarredRepositoriesLazyQueryHookResult = ReturnType<
+  typeof useUserStarredRepositoriesLazyQuery
+>;
+export type UserStarredRepositoriesQueryResult = Apollo.QueryResult<
+  UserStarredRepositoriesQuery,
+  UserStarredRepositoriesQueryVariables
 >;
 
 export interface PossibleTypesResultData {

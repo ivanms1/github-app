@@ -60,6 +60,45 @@ function createApolloClient() {
                 };
               },
             },
+            viewer: {
+              keyArgs: false,
+              merge(existing = null, incoming) {
+                const existingStarredKeyProperty = Object?.keys(
+                  existing || {}
+                )[3];
+                const incomingStarredKeyProperty = Object?.keys(
+                  incoming || {}
+                )[3];
+
+                if (
+                  !existing ||
+                  !existing?.[existingStarredKeyProperty].edges?.length
+                ) {
+                  return incoming;
+                }
+
+                const existingResults =
+                  existing?.[existingStarredKeyProperty].edges ?? [];
+
+                const uniqRepos = uniqBy(
+                  [
+                    ...existingResults,
+                    ...incoming[incomingStarredKeyProperty].edges,
+                  ],
+                  "node.__ref"
+                );
+
+                return {
+                  __typename: incoming.__typename,
+                  login: incoming.login,
+                  name: incoming.name,
+                  [existingStarredKeyProperty]: {
+                    ...incoming[incomingStarredKeyProperty],
+                    edges: [...uniqRepos],
+                  },
+                };
+              },
+            },
           },
         },
       },

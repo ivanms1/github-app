@@ -1,0 +1,31 @@
+query UserStarredRepositories($after: String) {
+  viewer {
+    login
+    name
+    starredRepositories(first: 10, after: $after) {
+      pageInfo {
+        startCursor
+        hasNextPage
+        endCursor
+      }
+      repositories: edges {
+        node {
+          id
+          name
+          nameWithOwner
+          description
+          updatedAt
+          createdAt
+          pushedAt
+          stargazerCount
+          viewerHasStarred
+          primaryLanguage {
+            color
+            name
+            id
+          }
+        }
+      }
+    }
+  }
+}
