@@ -1,7 +1,14 @@
-import RepositoryCard from "@/components/RepositoryCard";
 import React from "react";
+import Link from "next/link";
 import { Waypoint } from "react-waypoint";
-import { useUserStarredRepositoriesQuery } from "src/generated/graphql";
+
+import RepositoryCard from "@/components/RepositoryCard";
+import RepositoryList from "@/components/RepositoryList";
+
+import {
+  SearchRepositoriesQuery,
+  useUserStarredRepositoriesQuery,
+} from "src/generated/graphql";
 
 function User() {
   const { data, loading, fetchMore } = useUserStarredRepositoriesQuery();
@@ -20,6 +27,7 @@ function User() {
 
   return (
     <div>
+      <Link href={"/search"}>User</Link>
       <h1>My starred repositories</h1>
       <div>
         {data?.viewer?.starredRepositories.repositories?.map((repo) => (
@@ -29,6 +37,15 @@ function User() {
           <Waypoint onEnter={onRefetch} bottomOffset="-20%" />
         )}
       </div>
+      <RepositoryList
+        repositories={
+          data?.viewer?.starredRepositories
+            .repositories as SearchRepositoriesQuery["search"]["repositories"]
+        }
+        loading={loading}
+        cursor={data?.viewer?.starredRepositories?.pageInfo?.endCursor}
+        onRefetch={onRefetch}
+      />
     </div>
   );
 }

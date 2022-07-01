@@ -1,8 +1,8 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Waypoint } from "react-waypoint";
+import Link from "next/link";
 
-import RepositoryCard from "@/components/RepositoryCard";
+import RepositoryList from "@/components/RepositoryList";
 
 import { useSearchRepositoriesLazyQuery } from "src/generated/graphql";
 
@@ -67,6 +67,7 @@ function Search() {
 
   return (
     <div>
+      <Link href={"/user"}>User</Link>
       <h1>Search your favorite repos</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("query")} type="text" />
@@ -88,17 +89,12 @@ function Search() {
         {!!data?.search?.repositoryCount && (
           <p>{data?.search?.repositoryCount.toLocaleString()} results</p>
         )}
-        <div>
-          {data?.search?.repositories?.map(
-            (repo) =>
-              repo?.__typename === "Repository" && (
-                <RepositoryCard key={repo.nameWithOwner} repo={repo} />
-              )
-          )}
-          {!loading && data?.search?.pageInfo?.endCursor && (
-            <Waypoint onEnter={onRefetch} bottomOffset="-20%" />
-          )}
-        </div>
+        <RepositoryList
+          repositories={data?.search?.repositories}
+          loading={loading}
+          cursor={data?.search?.pageInfo?.endCursor}
+          onRefetch={onRefetch}
+        />
       </form>
     </div>
   );
