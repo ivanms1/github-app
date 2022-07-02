@@ -6,6 +6,8 @@ import RepositoryList from "@/components/RepositoryList";
 
 import { useSearchRepositoriesLazyQuery } from "src/generated/graphql";
 
+import SearchIllustration from "@/assets/icons/searching.svg";
+
 import styles from "./Search.module.scss";
 
 const SORT_BY_OPTIONS = [
@@ -101,6 +103,10 @@ function Search() {
           <Text size="lg">
             {data?.search?.repositoryCount.toLocaleString()} results
           </Text>
+        )}
+
+        {!data && !loading && (
+          <SearchIllustration className={styles.SearchSVG} />
         )}
 
         <RepositoryList
