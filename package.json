@@ -8,7 +8,8 @@
     "start": "next start",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "generate": "graphql-codegen --config codegen.yml"
+    "generate": "graphql-codegen --config codegen.yml",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
@@ -16,6 +17,7 @@
     "@mantine/hooks": "^4.2.11",
     "@mantine/next": "^4.2.11",
     "@mantine/notifications": "^4.2.11",
+    "@testing-library/react": "^13.3.0",
     "eslint": "^7.32.0",
     "framer-motion": "^6.3.16",
     "graphql": "^16.5.0",
@@ -39,6 +41,8 @@
     "@graphql-codegen/typescript-operations": "2.4.2",
     "@graphql-codegen/typescript-react-apollo": "3.2.16",
     "@svgr/webpack": "^6.2.1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@types/jest": "^28.1.4",
     "@types/lodash": "^4.14.182",
     "@types/node": "^18.0.0",
     "@types/react": "18.0.9",
@@ -47,6 +51,9 @@
     "eslint-config-next": "^12.2.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
+    "jest": "^28.1.2",
+    "jest-environment-jsdom": "^28.1.2",
+    "jest-transformer-svg": "^2.0.0",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "stylelint": "^14.9.1",

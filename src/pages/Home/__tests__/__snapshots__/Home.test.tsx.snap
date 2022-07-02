@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render the home page 1`] = `
+<div>
+  <div
+    class="Home"
+  >
+    <div
+      class="mantine-Text-root Title mantine-qls5vf"
+    >
+      Welcome to my Github App
+    </div>
+    <svg
+      class="WelcomeSVG"
+      data-file-name="SvgWelcome"
+    />
+    <button
+      class="mantine-Button-filled mantine-Button-root mantine-1kkl9mh"
+      type="button"
+    >
+      <div
+        class="mantine-3xbgk5 mantine-Button-inner"
+      >
+        <span
+          class="mantine-qo1k2 mantine-Button-label"
+        >
+          Sign in
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

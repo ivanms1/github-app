@@ -1,0 +1,722 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User page renders top project list 1`] = `
+<div>
+  <div
+    style="transform: translateX(-436.8368177947951px) translateZ(0);"
+  >
+    <div
+      class="mantine-Text-root Title mantine-1xctzl"
+    >
+      My starred repositories
+    </div>
+    <div
+      class="Container"
+      style="opacity: 1; transform: scale(0) translateZ(0);"
+    >
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/freeCodeCamp/freeCodeCamp"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            freeCodeCamp/freeCodeCamp
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free.
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-1v8afah"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              TypeScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              348357
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 5 years
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/chingu-voyage5/Geckos-Team-43"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            chingu-voyage5/Geckos-Team-43
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          Add-project-description-here | Voyage-5 | chingu.io
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-12tfcnq"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              JavaScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              3
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 1 year
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/hackerbayuniversity/Course"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            hackerbayuniversity/Course
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          Open Source course materials from HackerBay University
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-12tfcnq"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              JavaScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              68
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 1 year
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/chingu-voyage7/Bears-Team-29"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            chingu-voyage7/Bears-Team-29
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          eCommerce site | Voyage-7 | https://chingu.io/
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-12tfcnq"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              JavaScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              1
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 1 year
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/lingui/js-lingui"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            lingui/js-lingui
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          🌍📖 A readable, automated, and optimized (5 kb) internationalization for JavaScript
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-1v8afah"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              TypeScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              3384
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 5 years
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/facebook/react"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            facebook/react
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          A declarative, efficient, and flexible JavaScript library for building user interfaces.
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-12tfcnq"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              JavaScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              190753
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 5 years
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/prevwong/craft.js"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            prevwong/craft.js
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          🚀 A React Framework for building extensible drag and drop page editors
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-1v8afah"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              TypeScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              5024
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 5 years
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/ivanms1/nextjs-graphql-typescript"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            ivanms1/nextjs-graphql-typescript
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          GraphQL + TypeScript boilerplate for NextJS.
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-1v8afah"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              TypeScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              7
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 5 years
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/ivanms1/next-js-template"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            ivanms1/next-js-template
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          Next.js template
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-1v8afah"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              TypeScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              2
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 5 years
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/project-shelf/project-shelf"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            project-shelf/project-shelf
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          A showcase app for your projects
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-1v8afah"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              TypeScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              11
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 5 years
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/meetncode/meetncode"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            meetncode/meetncode
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          Meetups for developers
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="mantine-Badge-light mantine-Badge-root mantine-12tfcnq"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              JavaScript
+            </span>
+          </div>
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              2
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 5 years
+          </div>
+        </div>
+      </symbol>
+      <symbol
+        class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        variants="[object Object]"
+        whilehover="[object Object]"
+      >
+        <a
+          href="https://github.com/florinpop17/weekly-projects"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="mantine-Text-root Title mantine-14hwddk"
+          >
+            florinpop17/weekly-projects
+          </div>
+        </a>
+        <div
+          class="mantine-Text-root mantine-2qa0ve"
+        >
+          Build a project every week to improve your coding skills
+        </div>
+        <div
+          class="InfoBox"
+        >
+          <div
+            class="StarBox"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-14iebtj"
+              type="button"
+            >
+              <svg
+                data-file-name="SvgStarFilled"
+              />
+            </button>
+             
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              420
+            </div>
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            in 3 years
+          </div>
+        </div>
+      </symbol>
+    </div>
+    <span
+      style="font-size: 0px;"
+    />
+  </div>
+</div>
+`;
