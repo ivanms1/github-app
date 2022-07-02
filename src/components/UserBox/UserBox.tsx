@@ -1,6 +1,6 @@
 import React from "react";
-import { UnstyledButton, Group, Avatar, Text, Box } from "@mantine/core";
-import { useSession } from "next-auth/react";
+import { Group, Avatar, Text, Box, UnstyledButton } from "@mantine/core";
+import { signOut, useSession } from "next-auth/react";
 
 import styles from "./UserBox.module.scss";
 
@@ -9,19 +9,24 @@ function UserBox() {
 
   return (
     <Box className={styles.UserBox}>
-      <UnstyledButton className={styles.Buttons}>
-        <Group>
-          <Avatar src={session.data?.user?.image} radius="xl" />
-          <Box sx={{ flex: 1 }}>
-            <Text size="sm" weight={500}>
-              {session.data?.user?.name}
-            </Text>
-            <Text color="dimmed" size="xs">
-              {session.data?.user?.email}
-            </Text>
-          </Box>
-        </Group>
-      </UnstyledButton>
+      <Group>
+        <Avatar src={session.data?.user?.image} radius="xl" />
+        <Box sx={{ flex: 1 }}>
+          <Text size="sm" weight={500}>
+            {session.data?.user?.name}
+          </Text>
+          <Text color="dimmed" size="xs">
+            {session.data?.user?.email}
+          </Text>
+          <UnstyledButton
+            type="button"
+            className={styles.LogoutButton}
+            onClick={() => signOut()}
+          >
+            Logout
+          </UnstyledButton>
+        </Box>
+      </Group>
     </Box>
   );
 }
