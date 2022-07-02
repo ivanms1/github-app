@@ -37,19 +37,21 @@ function RepositoryList({
 }: RepositoryListProps) {
   return (
     <>
-      <motion.div
-        className={styles.Container}
-        variants={container}
-        initial="hidden"
-        animate="visible"
-      >
-        {repositories?.map(
-          (repo) =>
-            repo?.__typename === "Repository" && (
-              <RepositoryCard key={repo.nameWithOwner} repo={repo} />
-            )
-        )}
-      </motion.div>
+      {repositories && (
+        <motion.div
+          className={styles.Container}
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          {repositories?.map(
+            (repo) =>
+              repo?.__typename === "Repository" && (
+                <RepositoryCard key={repo.nameWithOwner} repo={repo} />
+              )
+          )}
+        </motion.div>
+      )}
       {!loading && cursor && (
         <Waypoint onEnter={onRefetch} bottomOffset="-50%" />
       )}
