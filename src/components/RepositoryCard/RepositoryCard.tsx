@@ -117,7 +117,9 @@ function RepositoryCard({ repo }: RepositoryCardProps) {
           )}{" "}
           <Text size="xs">{repo.stargazerCount}</Text>
         </div>
-        <Text size="xs">{timeAgo.format(updatedTimeDelta)}</Text>
+        {updatedTimeDelta && (
+          <Text size="xs">{timeAgo.format(updatedTimeDelta)}</Text>
+        )}
       </div>
     </Card>
   );

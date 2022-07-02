@@ -7,8 +7,11 @@ import RepositoryList from "@/components/RepositoryList";
 import { useSearchRepositoriesLazyQuery } from "src/generated/graphql";
 
 import SearchIllustration from "@/assets/icons/searching.svg";
+import NoResultsIllustration from "@/assets/icons/no-results.svg";
 
 import styles from "./Search.module.scss";
+
+const ZERO = 0;
 
 const SORT_BY_OPTIONS = [
   { value: "", label: "Best Match" },
@@ -99,10 +102,14 @@ function Search() {
           <NativeSelect {...register("language")} data={LANGUAGE_OPTIONS} />
         </Group>
 
-        {!!data?.search?.repositoryCount && (
+        {data?.search?.repositoryCount !== undefined && (
           <Text size="lg">
             {data?.search?.repositoryCount.toLocaleString()} results
           </Text>
+        )}
+
+        {data?.search?.repositoryCount === ZERO && (
+          <NoResultsIllustration className={styles.SearchSVG} />
         )}
 
         {!data && !loading && (
