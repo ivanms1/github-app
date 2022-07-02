@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "@mantine/core";
+import { motion } from "framer-motion";
 
 import RepositoryList from "@/components/RepositoryList";
 
@@ -28,7 +29,15 @@ function User() {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ x: -500 }}
+      animate={{ x: 0 }}
+      transition={{
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      }}
+    >
       <Text className={styles.Title} weight="bold">
         My starred repositories
       </Text>
@@ -42,7 +51,7 @@ function User() {
         cursor={data?.viewer?.starredRepositories?.pageInfo?.endCursor}
         onRefetch={onRefetch}
       />
-    </div>
+    </motion.div>
   );
 }
 

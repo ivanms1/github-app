@@ -1,6 +1,7 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Button, Group, Input, NativeSelect, Text } from "@mantine/core";
+import { motion } from "framer-motion";
 
 import RepositoryList from "@/components/RepositoryList";
 
@@ -75,7 +76,15 @@ function Search() {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ x: -500 }}
+      animate={{ x: 0 }}
+      transition={{
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      }}
+    >
       <Text className={styles.Title} weight="bold">
         Search your favorite repos
       </Text>
@@ -90,7 +99,6 @@ function Search() {
           <Button
             className={styles.SearchButton}
             disabled={loading}
-            loading={loading}
             type="submit"
           >
             Search
@@ -123,7 +131,7 @@ function Search() {
           onRefetch={onRefetch}
         />
       </form>
-    </div>
+    </motion.div>
   );
 }
 

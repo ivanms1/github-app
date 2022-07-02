@@ -1,6 +1,7 @@
 import React from "react";
 import { Badge, Card, Text, UnstyledButton } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
+import { motion } from "framer-motion";
 
 import {
   useAddStarMutation,
@@ -33,6 +34,17 @@ export interface RepositoryCardProps {
     } | null;
   };
 }
+
+// @ts-expect-error TODO: fix this ts error
+const MotionCard = motion(Card, { forwardMotionProps: true });
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 function RepositoryCard({ repo }: RepositoryCardProps) {
   const [star] = useAddStarMutation();
@@ -87,9 +99,18 @@ function RepositoryCard({ repo }: RepositoryCardProps) {
   };
 
   return (
-    <Card className={styles.RepositoryCard} shadow="sm">
+    <MotionCard
+      className={styles.RepositoryCard}
+      shadow="sm"
+      whileHover={{
+        scale: 1.03,
+        transition: { duration: 0.1 },
+      }}
+      variants={item}
+      component={"symbol"}
+    >
       <a href={repo.url} target="_blank" rel="noreferrer">
-        <Text component="p" size="lg" weight="bold">
+        <Text className={styles.Title} size="lg" weight="bold">
           {repo.nameWithOwner}
         </Text>
       </a>
@@ -121,7 +142,7 @@ function RepositoryCard({ repo }: RepositoryCardProps) {
           <Text size="xs">{timeAgo.format(updatedTimeDelta)}</Text>
         )}
       </div>
-    </Card>
+    </MotionCard>
   );
 }
 

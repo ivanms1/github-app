@@ -5,6 +5,12 @@
   padding: 1rem 1.5rem;
   width: 400px;
 
+  & .Title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   & .InfoBox {
     align-items: center;
     display: flex;

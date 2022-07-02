@@ -2,7 +2,7 @@ query UserStarredRepositories($after: String) {
   viewer {
     login
     name
-    starredRepositories(first: 10, after: $after) {
+    starredRepositories(first: 12, after: $after) {
       pageInfo {
         startCursor
         hasNextPage
