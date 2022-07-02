@@ -1,6 +1,7 @@
 import React from "react";
 import { Text } from "@mantine/core";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 import RepositoryList from "@/components/RepositoryList";
 
@@ -38,6 +39,9 @@ function User() {
         stiffness: 100,
       }}
     >
+      <Head>
+        <title>Starred</title>
+      </Head>
       <Text className={styles.Title} weight="bold">
         My starred repositories
       </Text>

@@ -2,6 +2,7 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Button, Group, Input, NativeSelect, Text } from "@mantine/core";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 import RepositoryList from "@/components/RepositoryList";
 
@@ -85,6 +86,9 @@ function Search() {
         stiffness: 100,
       }}
     >
+      <Head>
+        <title>Search</title>
+      </Head>
       <Text className={styles.Title} weight="bold">
         Search your favorite repos
       </Text>
