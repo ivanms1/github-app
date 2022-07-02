@@ -28,8 +28,6 @@ function AuthProvider({ children }: AuthProvider) {
     }
   }, [status]);
 
-  console.log("status", status);
-
   return <>{children}</>;
 }
 

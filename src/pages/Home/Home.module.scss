@@ -1,0 +1,14 @@
+.Home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
+  height: 100%;
+  justify-content: center;
+
+  & .Title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}

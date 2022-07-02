@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
+    "@mantine/core": "^4.2.11",
+    "@mantine/hooks": "^4.2.11",
+    "@mantine/next": "^4.2.11",
     "eslint": "^7.32.0",
     "graphql": "^16.5.0",
     "javascript-time-ago": "^2.5.5",
@@ -22,7 +25,9 @@
     "react-dom": "18.1.0",
     "react-hook-form": "^7.33.0",
     "react-waypoint": "^10.3.0",
-    "sass": "^1.53.0"
+    "sass": "^1.53.0",
+    "tabler-icons-react": "^1.52.0",
+    "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.6.4",

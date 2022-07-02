@@ -1,10 +1,12 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import Link from "next/link";
+import { Button, Group, Input, NativeSelect, Text } from "@mantine/core";
 
 import RepositoryList from "@/components/RepositoryList";
 
 import { useSearchRepositoriesLazyQuery } from "src/generated/graphql";
+
+import styles from "./Search.module.scss";
 
 const SORT_BY_OPTIONS = [
   { value: "", label: "Best Match" },
@@ -67,28 +69,38 @@ function Search() {
 
   return (
     <div>
-      <Link href={"/user"}>User</Link>
-      <h1>Search your favorite repos</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("query")} type="text" />
-        <select {...register("sortBy")}>
-          {SORT_BY_OPTIONS.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-        <select {...register("language")}>
-          {LANGUAGE_OPTIONS.map((lang) => (
-            <option key={lang.value} value={lang.value}>
-              {lang.label}
-            </option>
-          ))}
-        </select>
-        <button type="submit">Search</button>
+      <Text className={styles.Title} weight="bold">
+        Search your favorite repos
+      </Text>
+      <form className={styles.Form} onSubmit={handleSubmit(onSubmit)}>
+        <Group>
+          <Input
+            className={styles.SearchInput}
+            placeholder="Search..."
+            {...register("query")}
+            type="text"
+          />
+          <Button
+            className={styles.SearchButton}
+            disabled={loading}
+            loading={loading}
+            type="submit"
+          >
+            Search
+          </Button>
+        </Group>
+
+        <Group>
+          <NativeSelect {...register("sortBy")} data={SORT_BY_OPTIONS} />
+          <NativeSelect {...register("language")} data={LANGUAGE_OPTIONS} />
+        </Group>
+
         {!!data?.search?.repositoryCount && (
-          <p>{data?.search?.repositoryCount.toLocaleString()} results</p>
+          <Text size="lg">
+            {data?.search?.repositoryCount.toLocaleString()} results
+          </Text>
         )}
+
         <RepositoryList
           repositories={data?.search?.repositories}
           loading={loading}

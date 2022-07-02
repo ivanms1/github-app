@@ -1,14 +1,14 @@
 import React from "react";
-import Link from "next/link";
-import { Waypoint } from "react-waypoint";
+import { Text } from "@mantine/core";
 
-import RepositoryCard from "@/components/RepositoryCard";
 import RepositoryList from "@/components/RepositoryList";
 
 import {
   SearchRepositoriesQuery,
   useUserStarredRepositoriesQuery,
 } from "src/generated/graphql";
+
+import styles from "./User.module.scss";
 
 function User() {
   const { data, loading, fetchMore } = useUserStarredRepositoriesQuery();
@@ -27,20 +27,14 @@ function User() {
 
   return (
     <div>
-      <Link href={"/search"}>User</Link>
-      <h1>My starred repositories</h1>
-      <div>
-        {data?.viewer?.starredRepositories.repositories?.map((repo) => (
-          <RepositoryCard key={repo?.node.nameWithOwner} repo={repo?.node!} />
-        ))}
-        {!loading && data?.viewer?.starredRepositories?.pageInfo?.endCursor && (
-          <Waypoint onEnter={onRefetch} bottomOffset="-20%" />
-        )}
-      </div>
+      <Text className={styles.Title} weight="bold">
+        My starred repositories
+      </Text>
       <RepositoryList
         repositories={
-          data?.viewer?.starredRepositories
-            .repositories as SearchRepositoriesQuery["search"]["repositories"]
+          data?.viewer?.starredRepositories.repositories?.map(
+            (repo) => repo?.node
+          ) as SearchRepositoriesQuery["search"]["repositories"]
         }
         loading={loading}
         cursor={data?.viewer?.starredRepositories?.pageInfo?.endCursor}

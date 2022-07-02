@@ -1,0 +1,15 @@
+.Link {
+  border-radius: 5px;
+  display: block;
+  padding: 1rem;
+  width: 100%;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+
+  & .Icon {
+    height: 25px;
+    width: 25px;
+  }
+}

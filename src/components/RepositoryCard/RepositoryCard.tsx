@@ -1,10 +1,17 @@
 import React from "react";
+import { Badge, Card, Text, UnstyledButton } from "@mantine/core";
 
-import timeAgo from "@/helpers/timeAgo";
 import {
   useAddStarMutation,
   useRemoveStarMutation,
 } from "src/generated/graphql";
+
+import timeAgo from "@/helpers/timeAgo";
+
+import Star from "@/assets/icons/star.svg";
+import StarFilled from "@/assets/icons/star-filled.svg";
+
+import styles from "./RepositoryCard.module.scss";
 
 export interface RepositoryCardProps {
   repo: {
@@ -28,6 +35,7 @@ export interface RepositoryCardProps {
 function RepositoryCard({ repo }: RepositoryCardProps) {
   const [star] = useAddStarMutation();
   const [removeStar] = useRemoveStarMutation();
+
   const updatedTimeDelta =
     Date.now() - (Date.now() - new Date(repo?.pushedAt ?? "").getTime());
 
@@ -70,23 +78,37 @@ function RepositoryCard({ repo }: RepositoryCardProps) {
   };
 
   return (
-    <div>
-      <h3>{repo.nameWithOwner}</h3>
-      <p>{timeAgo.format(updatedTimeDelta)}</p>
-      <p>{repo.primaryLanguage?.name}</p>
-      <p>
-        {repo.viewerHasStarred ? (
-          <button type="button" onClick={handleStar}>
-            unstar
-          </button>
-        ) : (
-          <button type="button" onClick={handleStar}>
-            star
-          </button>
-        )}{" "}
-        {repo.stargazerCount}
-      </p>
-    </div>
+    <Card className={styles.RepositoryCard} shadow="sm">
+      <Text component="p" size="lg" weight="bold">
+        {repo.nameWithOwner}
+      </Text>
+      <Text size="sm">{repo.description}</Text>
+      <div className={styles.InfoBox}>
+        {repo?.primaryLanguage?.color && (
+          <Badge
+            sx={{
+              backgroundColor: repo?.primaryLanguage?.color,
+              color: "#FFF",
+            }}
+          >
+            {repo.primaryLanguage?.name}
+          </Badge>
+        )}
+        <div className={styles.StarBox}>
+          {repo.viewerHasStarred ? (
+            <UnstyledButton type="button" onClick={handleStar}>
+              <StarFilled />
+            </UnstyledButton>
+          ) : (
+            <UnstyledButton type="button" onClick={handleStar}>
+              <Star />
+            </UnstyledButton>
+          )}{" "}
+          <Text size="xs">{repo.stargazerCount}</Text>
+        </div>
+        <Text size="xs">{timeAgo.format(updatedTimeDelta)}</Text>
+      </div>
+    </Card>
   );
 }
 

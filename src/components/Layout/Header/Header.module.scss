@@ -1,0 +1,10 @@
+.Header {
+  align-items: center;
+  display: flex;
+  height: 100%;
+
+  & .Logo {
+    margin-right: 1rem;
+    width: 30px;
+  }
+}
