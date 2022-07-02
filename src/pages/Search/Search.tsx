@@ -35,7 +35,9 @@ type Inputs = {
 
 function Search() {
   const [search, { data, fetchMore, loading, client }] =
-    useSearchRepositoriesLazyQuery();
+    useSearchRepositoriesLazyQuery({
+      notifyOnNetworkStatusChange: true,
+    });
 
   const { register, handleSubmit, getValues } = useForm<Inputs>();
 

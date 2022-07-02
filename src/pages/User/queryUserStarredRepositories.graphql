@@ -19,6 +19,7 @@ query UserStarredRepositories($after: String) {
           pushedAt
           stargazerCount
           viewerHasStarred
+          url
           primaryLanguage {
             color
             name

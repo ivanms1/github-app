@@ -6,7 +6,7 @@ import {
   Group,
   ThemeIcon,
 } from "@mantine/core";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { Bookmark, Search } from "tabler-icons-react";
 
 import UserBox from "@/components/UserBox";
@@ -32,22 +32,32 @@ const SECTIONS = [
 
 function Navbar() {
   const open = useStore((state) => state.isNavbarOpen);
+  const handleNavbar = useStore((state) => state.handleNavbar);
+
+  const router = useRouter();
   return (
     <MNavbar hiddenBreakpoint="sm" hidden={!open} width={{ sm: 200, lg: 300 }}>
       <MNavbar.Section grow mt="md">
         {SECTIONS.map((section) => {
           const Icon = section.icon;
           return (
-            <Link key={section.path} href={section.path}>
-              <UnstyledButton className={styles.Link}>
-                <Group>
-                  <ThemeIcon color={section.color} variant="light">
-                    <Icon size={16} />
-                  </ThemeIcon>
-                  <Text size="sm">{section.label}</Text>
-                </Group>
-              </UnstyledButton>
-            </Link>
+            <UnstyledButton
+              key={section.path}
+              onClick={() => {
+                router.push(section.path);
+                if (open) {
+                  handleNavbar(false);
+                }
+              }}
+              className={styles.Link}
+            >
+              <Group>
+                <ThemeIcon color={section.color} variant="light">
+                  <Icon size={16} />
+                </ThemeIcon>
+                <Text size="sm">{section.label}</Text>
+              </Group>
+            </UnstyledButton>
           );
         })}
       </MNavbar.Section>

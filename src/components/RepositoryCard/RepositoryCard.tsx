@@ -24,6 +24,7 @@ export interface RepositoryCardProps {
     pushedAt?: string | null;
     stargazerCount: number;
     viewerHasStarred: boolean;
+    url: string;
     primaryLanguage?: {
       color?: string | null;
       name: string;
@@ -79,9 +80,11 @@ function RepositoryCard({ repo }: RepositoryCardProps) {
 
   return (
     <Card className={styles.RepositoryCard} shadow="sm">
-      <Text component="p" size="lg" weight="bold">
-        {repo.nameWithOwner}
-      </Text>
+      <a href={repo.url} target="_blank" rel="noreferrer">
+        <Text component="p" size="lg" weight="bold">
+          {repo.nameWithOwner}
+        </Text>
+      </a>
       <Text size="sm">{repo.description}</Text>
       <div className={styles.InfoBox}>
         {repo?.primaryLanguage?.color && (

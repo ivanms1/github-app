@@ -20,23 +20,26 @@ function RepositoryList({
   cursor,
   loading,
 }: RepositoryListProps) {
+  console.log("loading", loading);
   return (
-    <div className={styles.Container}>
-      {repositories?.map(
-        (repo) =>
-          repo?.__typename === "Repository" && (
-            <RepositoryCard key={repo.nameWithOwner} repo={repo} />
-          )
-      )}
-      {!loading && cursor && (
-        <Waypoint onEnter={onRefetch} bottomOffset="-20%" />
-      )}
+    <>
+      <div className={styles.Container}>
+        {repositories?.map(
+          (repo) =>
+            repo?.__typename === "Repository" && (
+              <RepositoryCard key={repo.nameWithOwner} repo={repo} />
+            )
+        )}
+        {!loading && cursor && (
+          <Waypoint onEnter={onRefetch} bottomOffset="-50%" />
+        )}
+      </div>
       {loading && (
         <div className={styles.LoaderContainer}>
           <Loader />
         </div>
       )}
-    </div>
+    </>
   );
 }
 

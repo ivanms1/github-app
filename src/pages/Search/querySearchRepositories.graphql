@@ -17,6 +17,7 @@ query SearchRepositories($query: String!, $after: String) {
         pushedAt
         stargazerCount
         viewerHasStarred
+        url
         primaryLanguage {
           color
           name

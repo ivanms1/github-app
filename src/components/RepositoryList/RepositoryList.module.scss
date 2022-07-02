@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 2rem 0;
   height: 100%;
+  justify-items: center;
 
   & .LoaderContainer {
     align-items: center;
@@ -10,5 +11,10 @@
     height: 100%;
     justify-content: center;
     width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }

@@ -26381,6 +26381,7 @@ export type SearchRepositoriesQuery = {
           pushedAt?: any | null;
           stargazerCount: number;
           viewerHasStarred: boolean;
+          url: any;
           primaryLanguage?: {
             __typename?: "Language";
             color?: string | null;
@@ -26425,6 +26426,7 @@ export type UserStarredRepositoriesQuery = {
           pushedAt?: any | null;
           stargazerCount: number;
           viewerHasStarred: boolean;
+          url: any;
           primaryLanguage?: {
             __typename?: "Language";
             color?: string | null;
@@ -26566,6 +26568,7 @@ export const SearchRepositoriesDocument = gql`
           pushedAt
           stargazerCount
           viewerHasStarred
+          url
           primaryLanguage {
             color
             name
@@ -26650,6 +26653,7 @@ export const UserStarredRepositoriesDocument = gql`
             pushedAt
             stargazerCount
             viewerHasStarred
+            url
             primaryLanguage {
               color
               name

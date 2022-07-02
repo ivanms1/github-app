@@ -11,7 +11,9 @@ import {
 import styles from "./User.module.scss";
 
 function User() {
-  const { data, loading, fetchMore } = useUserStarredRepositoriesQuery();
+  const { data, loading, fetchMore } = useUserStarredRepositoriesQuery({
+    notifyOnNetworkStatusChange: true,
+  });
 
   const onRefetch = () => {
     if (!data?.viewer?.starredRepositories.pageInfo?.hasNextPage) {
