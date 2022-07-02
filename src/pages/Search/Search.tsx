@@ -110,8 +110,16 @@ function Search() {
         </Group>
 
         <Group>
-          <NativeSelect {...register("sortBy")} data={SORT_BY_OPTIONS} />
-          <NativeSelect {...register("language")} data={LANGUAGE_OPTIONS} />
+          <NativeSelect
+            id="sort-select"
+            {...register("sortBy")}
+            data={SORT_BY_OPTIONS}
+          />
+          <NativeSelect
+            id="language-select"
+            {...register("language")}
+            data={LANGUAGE_OPTIONS}
+          />
         </Group>
 
         {data?.search?.repositoryCount !== undefined && (

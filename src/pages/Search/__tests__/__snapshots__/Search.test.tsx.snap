@@ -1,0 +1,915 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search page it should search and render results 1`] = `
+<div>
+  <div
+    style="transform: none;"
+  >
+    <div
+      class="mantine-Text-root Title mantine-1xctzl"
+    >
+      Search your favorite repos
+    </div>
+    <form
+      class="Form"
+    >
+      <div
+        class="mantine-Group-root mantine-6y1794"
+      >
+        <div
+          class="mantine-Input-wrapper mantine-Group-child SearchInput mantine-1n03fuk"
+        >
+          <input
+            class="mantine-Input-defaultVariant mantine-Input-input mantine-g773hu"
+            name="query"
+            placeholder="Search..."
+            type="text"
+          />
+        </div>
+        <button
+          class="mantine-Button-filled mantine-Button-root mantine-Group-child SearchButton mantine-5q9waz"
+          disabled=""
+          type="submit"
+        >
+          <div
+            class="mantine-3xbgk5 mantine-Button-inner"
+          >
+            <span
+              class="mantine-qo1k2 mantine-Button-label"
+            >
+              Search
+            </span>
+          </div>
+        </button>
+      </div>
+      <div
+        class="mantine-Group-root mantine-6y1794"
+      >
+        <div
+          class="mantine-NativeSelect-root mantine-Group-child mantine-1rilmrs"
+        >
+          <div
+            class="mantine-NativeSelect-wrapper mantine-12sbrde"
+          >
+            <select
+              aria-invalid="false"
+              class="mantine-NativeSelect-defaultVariant mantine-NativeSelect-input mantine-1nymnbu"
+              id="sort-select"
+              name="sortBy"
+            >
+              <option
+                value=""
+              >
+                Best Match
+              </option>
+              <option
+                value="sort:updated"
+              >
+                Recently Updated
+              </option>
+            </select>
+            <div
+              class="mantine-uquezq mantine-NativeSelect-rightSection"
+            >
+              <svg
+                data-chevron="true"
+                fill="none"
+                height="18"
+                style="color: rgb(134, 142, 150);"
+                viewBox="0 0 15 15"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mantine-NativeSelect-root mantine-Group-child mantine-1rilmrs"
+        >
+          <div
+            class="mantine-NativeSelect-wrapper mantine-12sbrde"
+          >
+            <select
+              aria-invalid="false"
+              class="mantine-NativeSelect-defaultVariant mantine-NativeSelect-input mantine-1nymnbu"
+              id="language-select"
+              name="language"
+            >
+              <option
+                value=""
+              >
+                Any Language
+              </option>
+              <option
+                value="language:javascript"
+              >
+                Javascript
+              </option>
+              <option
+                value="language:python"
+              >
+                Python
+              </option>
+              <option
+                value="language:java"
+              >
+                Java
+              </option>
+              <option
+                value="language:csharp"
+              >
+                C#
+              </option>
+              <option
+                value="language:cpp"
+              >
+                C++
+              </option>
+              <option
+                value="language:c"
+              >
+                C
+              </option>
+              <option
+                value="language:shell"
+              >
+                Shell
+              </option>
+              <option
+                value="language:ruby"
+              >
+                Ruby
+              </option>
+              <option
+                value="language:typescript"
+              >
+                TypeScript
+              </option>
+              <option
+                value="language:go"
+              >
+                Go
+              </option>
+            </select>
+            <div
+              class="mantine-uquezq mantine-NativeSelect-rightSection"
+            >
+              <svg
+                data-chevron="true"
+                fill="none"
+                height="18"
+                style="color: rgb(134, 142, 150);"
+                viewBox="0 0 15 15"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mantine-Text-root mantine-1ic9apo"
+      >
+        17,822
+         results
+      </div>
+      <div
+        class="Container"
+        style="opacity: 1; transform: none;"
+      >
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/marmelroy/Localize-Swift"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              marmelroy/Localize-Swift
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            Swift friendly localization and i18n with in-app language switching
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-tg86wr"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                Swift
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                2823
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 4 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/cakephp/localized"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              cakephp/localized
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            I18n and L10n related CakePHP code
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-11a7ab3"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                PHP
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                214
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 5 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/zoontek/react-native-localize"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              zoontek/react-native-localize
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            🌍 A toolbox for your React Native app localization
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-zhecwz"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                Java
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                1797
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 5 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/coderifous/jquery-localize"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              coderifous/jquery-localize
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            a jQuery plugin that makes it easy to internationalize your web site.  
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-12tfcnq"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                JavaScript
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                471
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              1 month ago
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/mcamara/laravel-localization"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              mcamara/laravel-localization
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            Easy localization for Laravel
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-11a7ab3"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                PHP
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                2928
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 5 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/freshOS/Localize"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              freshOS/Localize
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            🏁 Automatically clean your Localizable.strings files
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-tg86wr"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                Swift
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                333
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 3 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/YerongAI/Office-Tool"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              YerongAI/Office-Tool
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            Office Tool Plus localization projects.
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                4701
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 5 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/mozilla/pontoon"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              mozilla/pontoon
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            Mozilla's Localization Platform
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-u2xkgv"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                Python
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                1166
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 5 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/zam1024t/LocalizedMenu"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              zam1024t/LocalizedMenu
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            Localize Tool & Localized Menu for Sublime Text 2/3/4 End User. Localization with 简体中文(Simplified Chinese)/繁体中文(Traditional Chinese)/Русский(Russian)/Español(Spanish)/Հայերեն(Armenian)/Svenska(Swedish)/Français(French)/Português(Portuguese)/Deutsch(German)/Any other language.
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-u2xkgv"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                Python
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                97
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 5 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/Greentube/localize-router"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              Greentube/localize-router
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            An implementation of routes localisation for Angular
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-1v8afah"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                TypeScript
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                190
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 5 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/angular/angular-cn"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              angular/angular-cn
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            Chinese localization of angular.io
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-obf6yl"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                Pug
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                767
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 4 years
+            </div>
+          </div>
+        </symbol>
+        <symbol
+          class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
+          style="opacity: 1; transform: none;"
+          variants="[object Object]"
+          whilehover="[object Object]"
+        >
+          <a
+            href="https://github.com/ryandrewjohnson/react-localize-redux"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div
+              class="mantine-Text-root Title mantine-14hwddk"
+            >
+              ryandrewjohnson/react-localize-redux
+            </div>
+          </a>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            Dead simple localization for your React components
+          </div>
+          <div
+            class="InfoBox"
+          >
+            <div
+              class="mantine-Badge-light mantine-Badge-root mantine-12tfcnq"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                JavaScript
+              </span>
+            </div>
+            <div
+              class="StarBox"
+            >
+              <button
+                class="mantine-UnstyledButton-root mantine-14iebtj"
+                type="button"
+              >
+                <svgrurl />
+              </button>
+               
+              <div
+                class="mantine-Text-root mantine-1f83q5f"
+              >
+                383
+              </div>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1f83q5f"
+            >
+              in 5 years
+            </div>
+          </div>
+        </symbol>
+      </div>
+      <div
+        class="LoaderContainer"
+      >
+        <svg
+          class="mantine-1avyp1d"
+          height="36px"
+          role="presentation"
+          stroke="#228be6"
+          viewBox="0 0 38 38"
+          width="36px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              stroke-width="5"
+              transform="translate(2.5 2.5)"
+            >
+              <circle
+                cx="16"
+                cy="16"
+                r="16"
+                stroke-opacity=".5"
+              />
+              <path
+                d="M32 16c0-9.94-8.06-16-16-16"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="1s"
+                  from="0 16 16"
+                  repeatCount="indefinite"
+                  to="360 16 16"
+                  type="rotate"
+                />
+              </path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </form>
+  </div>
+</div>
+`;
