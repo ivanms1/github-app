@@ -1,5 +1,6 @@
 import React from "react";
 import { Badge, Card, Text, UnstyledButton } from "@mantine/core";
+import { showNotification } from "@mantine/notifications";
 
 import {
   useAddStarMutation,
@@ -40,40 +41,47 @@ function RepositoryCard({ repo }: RepositoryCardProps) {
   const updatedTimeDelta =
     Date.now() - (Date.now() - new Date(repo?.pushedAt ?? "").getTime());
 
-  const handleStar = () => {
-    if (repo.viewerHasStarred) {
-      removeStar({
-        variables: {
-          input: {
-            starrableId: repo.id,
-          },
-        },
-        optimisticResponse: {
-          removeStar: {
-            starrable: {
-              ...repo,
-              viewerHasStarred: false,
-              stargazerCount: repo.stargazerCount - 1,
+  const handleStar = async () => {
+    try {
+      if (repo.viewerHasStarred) {
+        await removeStar({
+          variables: {
+            input: {
+              starrableId: repo.id,
             },
           },
-        },
-      });
-    } else {
-      star({
-        variables: {
-          input: {
-            starrableId: repo.id,
-          },
-        },
-        optimisticResponse: {
-          addStar: {
-            starrable: {
-              ...repo,
-              viewerHasStarred: true,
-              stargazerCount: repo.stargazerCount + 1,
+          optimisticResponse: {
+            removeStar: {
+              starrable: {
+                ...repo,
+                viewerHasStarred: false,
+                stargazerCount: repo.stargazerCount - 1,
+              },
             },
           },
-        },
+        });
+      } else {
+        await star({
+          variables: {
+            input: {
+              starrableId: repo.id,
+            },
+          },
+          optimisticResponse: {
+            addStar: {
+              starrable: {
+                ...repo,
+                viewerHasStarred: true,
+                stargazerCount: repo.stargazerCount + 1,
+              },
+            },
+          },
+        });
+      }
+    } catch (error) {
+      showNotification({
+        color: "red",
+        message: String(error),
       });
     }
   };

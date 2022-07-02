@@ -15,6 +15,7 @@
     "@mantine/core": "^4.2.11",
     "@mantine/hooks": "^4.2.11",
     "@mantine/next": "^4.2.11",
+    "@mantine/notifications": "^4.2.11",
     "eslint": "^7.32.0",
     "graphql": "^16.5.0",
     "javascript-time-ago": "^2.5.5",

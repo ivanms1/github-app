@@ -1,6 +1,7 @@
 import { ApolloProvider } from "@apollo/client";
 import { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
+import { NotificationsProvider } from "@mantine/notifications";
 
 import AuthProvider from "@/components/AuthProvider";
 import Layout from "@/components/Layout";
@@ -18,9 +19,11 @@ function CustomApp({
     <SessionProvider session={session}>
       <ApolloProvider client={client}>
         <AuthProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <NotificationsProvider position="top-right">
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </NotificationsProvider>
         </AuthProvider>
       </ApolloProvider>
     </SessionProvider>
