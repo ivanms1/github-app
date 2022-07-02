@@ -20,7 +20,6 @@ function RepositoryList({
   cursor,
   loading,
 }: RepositoryListProps) {
-  console.log("loading", loading);
   return (
     <>
       <div className={styles.Container}>
