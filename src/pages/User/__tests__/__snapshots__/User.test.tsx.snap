@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`User page renders top project list 1`] = `
+exports[`User page it should render the user starred repositories 1`] = `
 <div>
   <div
     style="transform: translateX(-436.8368177947951px) translateZ(0);"
@@ -55,9 +55,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -114,9 +112,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -173,9 +169,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -232,9 +226,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -291,9 +283,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -350,9 +340,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -409,9 +397,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -468,9 +454,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -527,9 +511,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -586,9 +568,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -645,9 +625,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div
@@ -695,9 +673,7 @@ exports[`User page renders top project list 1`] = `
               class="mantine-UnstyledButton-root mantine-14iebtj"
               type="button"
             >
-              <svg
-                data-file-name="SvgStarFilled"
-              />
+              <svgrurl />
             </button>
              
             <div

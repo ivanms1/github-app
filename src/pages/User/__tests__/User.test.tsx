@@ -28,7 +28,7 @@ describe("User page", () => {
     Date.now = jest.fn(() => new Date(Date.UTC(2017, 7, 9, 8)).valueOf());
   });
 
-  test("renders top project list", async () => {
+  test("it should render the user starred repositories", async () => {
     const { container } = render(
       <MockedProvider mocks={mocks}>
         <User />
