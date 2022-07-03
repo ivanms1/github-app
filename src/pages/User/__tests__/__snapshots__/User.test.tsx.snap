@@ -3,7 +3,7 @@
 exports[`User page it should render the user starred repositories 1`] = `
 <div>
   <div
-    style="transform: translateX(-436.8368177947951px) translateZ(0);"
+    style="transform: none;"
   >
     <div
       class="mantine-Text-root Title mantine-1xctzl"
@@ -12,11 +12,11 @@ exports[`User page it should render the user starred repositories 1`] = `
     </div>
     <div
       class="Container"
-      style="opacity: 1; transform: scale(0) translateZ(0);"
+      style="opacity: 1; transform: none;"
     >
-      <symbol
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -70,10 +70,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 5 years
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -127,10 +127,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 1 year
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -184,10 +184,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 1 year
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -241,10 +241,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 1 year
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -298,10 +298,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 5 years
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -355,10 +355,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 5 years
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -412,10 +412,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 5 years
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -469,10 +469,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 5 years
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -526,10 +526,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 5 years
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -583,10 +583,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 5 years
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -640,10 +640,10 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 5 years
           </div>
         </div>
-      </symbol>
-      <symbol
+      </div>
+      <div
         class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
-        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+        style="opacity: 1; transform: none;"
         variants="[object Object]"
         whilehover="[object Object]"
       >
@@ -688,7 +688,7 @@ exports[`User page it should render the user starred repositories 1`] = `
             in 3 years
           </div>
         </div>
-      </symbol>
+      </div>
     </div>
     <span
       style="font-size: 0px;"
