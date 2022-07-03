@@ -2,7 +2,7 @@
 
 ## Description
 
-App where you can search repositories and filter them by language and updated date. Also you can check your own repositories.
+App where you can search repositories and filter them by language and updated date. Also you can check your starred repositories.
 
 ## Technology stack
 
