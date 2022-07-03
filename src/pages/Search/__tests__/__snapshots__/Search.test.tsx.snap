@@ -191,7 +191,7 @@ exports[`Search page it should search and render results 1`] = `
         class="Container"
         style="opacity: 1; transform: none;"
       >
-        <symbol
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -247,8 +247,8 @@ exports[`Search page it should search and render results 1`] = `
               in 4 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -304,8 +304,8 @@ exports[`Search page it should search and render results 1`] = `
               in 5 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -361,8 +361,8 @@ exports[`Search page it should search and render results 1`] = `
               in 5 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -418,8 +418,8 @@ exports[`Search page it should search and render results 1`] = `
               1 month ago
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -475,8 +475,8 @@ exports[`Search page it should search and render results 1`] = `
               in 5 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -532,8 +532,8 @@ exports[`Search page it should search and render results 1`] = `
               in 3 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -580,8 +580,8 @@ exports[`Search page it should search and render results 1`] = `
               in 5 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -637,8 +637,8 @@ exports[`Search page it should search and render results 1`] = `
               in 5 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -694,8 +694,8 @@ exports[`Search page it should search and render results 1`] = `
               in 5 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -751,8 +751,8 @@ exports[`Search page it should search and render results 1`] = `
               in 5 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -808,8 +808,8 @@ exports[`Search page it should search and render results 1`] = `
               in 4 years
             </div>
           </div>
-        </symbol>
-        <symbol
+        </div>
+        <div
           class="mantine-Paper-root mantine-Card-root RepositoryCard mantine-1lay5d4"
           style="opacity: 1; transform: none;"
           variants="[object Object]"
@@ -865,7 +865,7 @@ exports[`Search page it should search and render results 1`] = `
               in 5 years
             </div>
           </div>
-        </symbol>
+        </div>
       </div>
       <div
         class="LoaderContainer"
