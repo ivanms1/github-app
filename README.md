@@ -6,13 +6,22 @@ App where you can search repositories and filter them by language and updated da
 
 ## Technology stack
 
-- [React.js](https://reactjs.org/), [Next.js](https://nextjs.org/) and [Apollo Client](https://www.apollographql.com/docs/react/)
+- [React.js](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [GraphQL](https://graphql.org/)
+- [Apollo Client](https://www.apollographql.com/docs/react/)
+- [Next Auth](https://next-auth.js.org/)
+- [GraphQL Code Generator](https://www.graphql-code-generator.com/)
+- [Mantine](https://mantine.dev/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [Framer Motion](https://www.framer.com/motion/)
 
 ## Requirements
 
 - **Yarn**
 
-This repository uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager.
+  This repository uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager.
 
 - **Github OAuth**
   Github is being used as an auth provider, you will need to [create an OAuth](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) app on your github account with these settings:
@@ -41,4 +50,20 @@ This repository uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package m
 
   ```
   yarn dev:web
+  ```
+
+## Generating graphql hooks
+
+- Scan for graphql files and automatically generate apollo hooks
+
+  ```
+  yarn generate
+  ```
+
+## Testing
+
+- Run tests
+
+  ```
+  yarn test
   ```
