@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
+import { Loader } from "@mantine/core";
+
+import styles from "./AuthProvider.module.scss";
 
 const PRIVATE_ROUTES = ["/user", "/search"];
 
@@ -27,6 +30,14 @@ function AuthProvider({ children }: AuthProvider) {
       router.replace("/search");
     }
   }, [status]);
+
+  if (status === "loading") {
+    return (
+      <div className={styles.LoaderContainer}>
+        <Loader size="lg" />
+      </div>
+    );
+  }
 
   return <>{children}</>;
 }
