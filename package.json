@@ -10,7 +10,7 @@
     "pre-commit": "lint-staged",
     "generate": "graphql-codegen --config codegen.yml",
     "test": "jest --watch",
-    "test:ci": "jest --watch"
+    "test:ci": "jest"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
