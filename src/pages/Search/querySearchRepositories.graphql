@@ -1,5 +1,5 @@
 query SearchRepositories($query: String!, $after: String) {
-  search(query: $query, type: REPOSITORY, after: $after, first: 12) {
+  search(query: $query, type: REPOSITORY, after: $after, first: 20) {
     repositoryCount
     pageInfo {
       startCursor

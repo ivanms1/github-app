@@ -26550,7 +26550,7 @@ export type RemoveStarMutationOptions = Apollo.BaseMutationOptions<
 >;
 export const SearchRepositoriesDocument = gql`
   query SearchRepositories($query: String!, $after: String) {
-    search(query: $query, type: REPOSITORY, after: $after, first: 12) {
+    search(query: $query, type: REPOSITORY, after: $after, first: 20) {
       repositoryCount
       pageInfo {
         startCursor
@@ -26636,7 +26636,7 @@ export const UserStarredRepositoriesDocument = gql`
     viewer {
       login
       name
-      starredRepositories(first: 12, after: $after) {
+      starredRepositories(first: 20, after: $after) {
         pageInfo {
           startCursor
           hasNextPage
