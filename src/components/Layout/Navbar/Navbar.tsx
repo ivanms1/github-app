@@ -37,7 +37,7 @@ function Navbar() {
   const router = useRouter();
   return (
     <MNavbar hiddenBreakpoint="sm" hidden={!open} width={{ sm: 200, lg: 300 }}>
-      <MNavbar.Section grow mt="md">
+      <MNavbar.Section grow>
         {SECTIONS.map((section) => {
           const Icon = section.icon;
           return (

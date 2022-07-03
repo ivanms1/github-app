@@ -107,7 +107,7 @@ function RepositoryCard({ repo }: RepositoryCardProps) {
         transition: { duration: 0.1 },
       }}
       variants={item}
-      component={"symbol"}
+      component="div"
     >
       <a href={repo.url} target="_blank" rel="noreferrer">
         <Text className={styles.Title} size="lg" weight="bold">
