@@ -24,6 +24,7 @@ App where you can search repositories and filter them by language and updated da
   This repository uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager.
 
 - **Github OAuth**
+
   Github is being used as an auth provider, you will need to [create an OAuth](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) app on your github account with these settings:
 
   ![](https://res.cloudinary.com/ivanms1/image/upload/v1644078662/Screen_Shot_2022-02-06_at_1.28.01_AM_aa0u5l.png)
