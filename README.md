@@ -50,7 +50,7 @@ App where you can search repositories and filter them by language and updated da
 - Start the app
 
   ```
-  yarn dev:web
+  yarn dev
   ```
 
 ## Generating graphql hooks
